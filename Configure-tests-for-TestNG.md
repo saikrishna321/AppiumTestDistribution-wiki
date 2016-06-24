@@ -65,10 +65,20 @@
     IOS_APP_PATH=<absolute path to .app/.ipa>
     ANDROID_APP_PATH=<absoulte path to .apk>
     FRAMEWORK=testng/cucumber
+    
+    ## For remote logging the reports using ExtentX(http://extentreports.relevantcodes.com/extentx/)
+    MONGODB_SERVER=ADDRESS_OF_THE_SERVER
+    MONGODB_PORT=PORT_NUMBER
     ```
 
 ###Run Test from CommandLine
 
 ```
 mvn clean -Dtest=Runner test
+```
+
+###Run Test from CommandLine with ExtentX logging
+
+```
+ExtentX="true" mvn clean -Dtest=Runner test
 ```
