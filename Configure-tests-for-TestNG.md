@@ -10,6 +10,26 @@
             parallelThread.runner("com.paralle.tests");
         }
     }
+
+**  Run lists of tests** 
+     @Test
+        public void testApp() throws Exception {
+          ParallelThread parallelThread = new ParallelThread();
+          List<String> tests = new ArrayList<>();
+          tests.add("HomePageTest2");
+          tests.add("HomePageTest3");
+          parallelThread.runner("com.test.site",tests);
+        }
+
+  **Run lists of tests from mulitple packages**
+     @Test
+        public void testApp() throws Exception {
+          ParallelThread parallelThread = new ParallelThread();
+          List<String> tests = new ArrayList<>();
+          tests.add("HomePageTest2");
+          tests.add("HomePageTest3");
+          parallelThread.runner("com.test.site,com.ios.test",tests);
+        }
     ```
 2. Extend your tests to AppiumParallelTest ::( It is part of the dependencies and will take care of running the Appium server session in parallel threads).
 
