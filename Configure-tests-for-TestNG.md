@@ -1,6 +1,6 @@
 1. Main Runnerclass should look as below ::
 
-  **Run lists of tests from package** 
+`` 
     public class Runner {
 
         @Test
