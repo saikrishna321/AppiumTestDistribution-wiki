@@ -1,7 +1,8 @@
 1. Main Runnerclass should look as below ::
 
     ```
-    public class Runner {
+** Run lists of tests from package **    
+      public class Runner {
 
         @Test
         public void testApp() throws Exception {
