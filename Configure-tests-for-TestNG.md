@@ -31,6 +31,22 @@
           tests.add("HomePageTest3");
           parallelThread.runner("com.test.site,com.ios.test",tests);
         }
+
+** Run test against certain devices connected**
+command to start runner
+mvn clean -Dtest=RunnerCukes test -Dudid=udid1,udid2,udid3
+
+public class RunnerCukes {
+    @Test 
+    public void testCukesRunner() throws Exception {
+        String udidParam = System.getProperty("udid");
+        String[] parts = udidParam.split(",");
+    	List<String> deviceList = Arrays.asList(parts);
+    	ParallelThread cucumberParallelThread = new ParallelThread(deviceList);
+        boolean hasFailures = cucumberParallelThread.runner("output");
+        Assert.assertFalse(hasFailures, "Testcases have failed in parallel execution");
+    }
+}
     ```
 2. Extend your tests to AppiumParallelTest ::( It is part of the dependencies and will take care of running the Appium server session in parallel threads).
 
