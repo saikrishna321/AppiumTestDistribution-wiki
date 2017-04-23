@@ -1,6 +1,6 @@
 1. Main Runnerclass should look as below ::
 
-    ```
+```
 ** Run lists of tests from package **    
       public class Runner {
 
@@ -12,7 +12,7 @@
         }
     }
 
-**  Run lists of tests** 
+** Run lists of tests ** 
      @Test
         public void testApp() throws Exception {
           ParallelThread parallelThread = new ParallelThread();
@@ -22,7 +22,7 @@
           parallelThread.runner("com.test.site",tests);
         }
 
-  **Run lists of tests from mulitple packages**
+** Run lists of tests from mulitple packages **
      @Test
         public void testApp() throws Exception {
           ParallelThread parallelThread = new ParallelThread();
@@ -32,7 +32,7 @@
           parallelThread.runner("com.test.site,com.ios.test",tests);
         }
 
-** Run test against certain devices connected**
+** Run test against certain devices connected **
 command to start runner
 mvn clean -Dtest=RunnerCukes test -Dudid=udid1,udid2,udid3
 
@@ -47,16 +47,16 @@ public class RunnerCukes {
         Assert.assertFalse(hasFailures, "Testcases have failed in parallel execution");
     }
 }
-    ```
+
+```
 2. Extend your tests to AppiumParallelTest ::( It is part of the dependencies and will take care of running the Appium server session in parallel threads).
 
-    ```
+```
     public class UserBaseTest extends AppiumParallelTest {
 
         @BeforeMethod()
         public void startApp(Method name) throws Exception {
             driver = startAppiumServerInParallel(name.getName());
-            startLogResults(name.getName());
         }
 
         @AfterMethod()
@@ -68,18 +68,8 @@ public class RunnerCukes {
         public AppiumDriver<MobileElement> getDriver() {
             return driver;
         }
-
-        @BeforeClass()
-        public void beforeClass() throws Exception {
-             startAppiumServer(getClass().getSimpleName());
-        }
-
-        @AfterClass()
-        public void afterClass() throws InterruptedException, IOException {
-            killAppiumServer();
-        }
     }
-    ```
+```
 
 3. Create `config.properties` file under your test directory, which should have below properties.
 
