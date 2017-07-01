@@ -49,33 +49,10 @@ public class RunnerCukes {
 }
 
 ```
-2. Extend your tests to AppiumParallelTest ::( It is part of the dependencies and will take care of running the Appium server session in parallel threads).
 
-```
-    public class UserBaseTest extends AppiumParallelTest {
-
-        @BeforeMethod()
-        public void startApp(Method name) throws Exception {
-            driver = startAppiumServerInParallel(name.getName());
-        }
-
-        @AfterMethod()
-        public void killServer(ITestResult result) {
-            endLogTestResults(result);
-            getDriver().quit();
-        }
-
-        public AppiumDriver<MobileElement> getDriver() {
-            return driver;
-        }
-    }
-```
-
-3. Create `config.properties` file under your test directory, which should have below properties.
+2. Create `config.properties` file under your test directory, which should have below properties.
 
     ```
-    APP_PACKAGE=com.android2.calculator3
-    APP_ACTIVITY=com.android2.calculator3.Calculator
     RUNNER=distribute
 
     ## For appium 1.5.X users (If appium installed using npm)
@@ -89,19 +66,19 @@ public class RunnerCukes {
     BROWSER_TYPE=chrome
     APP_TYPE=NA
     BUNDLE_ID=
-    IOS_APP_PATH=<absolute path to .app/.ipa>
-    ANDROID_APP_PATH=<absoulte path to .apk>
     FRAMEWORK=testng/cucumber
     
     ## For remote logging the reports using ExtentX(http://extentreports.relevantcodes.com/extentx/)
     MONGODB_SERVER=ADDRESS_OF_THE_SERVER
     MONGODB_PORT=PORT_NUMBER
     ```
+3. If you want to specify android/iOS capabilities 
+   (https://github.com/saikrishna321/PageObjectPatternAppium/tree/master/caps)
 
 ###Run Test from CommandLine
 
 ```
-mvn clean -Dtest=Runner test
+Platform="android/ios/both" mvn clean -Dtest=Runner test
 ```
 
 ###Run Test from CommandLine with ExtentX logging
