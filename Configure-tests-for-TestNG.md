@@ -61,6 +61,12 @@ public class RunnerCukes {
     APP_TYPE=NA
     BUNDLE_ID=
     FRAMEWORK=testng/cucumber
+    LISTENERS=listerner2,listerner2 (user can add custom listeners here, comma separated)
+    MAX_RETRY_COUNT=2 (Provide any retry count on failures, this is applied to all tests globally)
+    
+    ## Default path to capability json is root/caps/, if the location of the android.json & iOS.json is changed make sure you mention as below 
+    IOS_CAPS=relative/absolute
+    ANDROID_CAPS=relative/absolute 
     
     ## For remote logging the reports using ExtentX(http://extentreports.relevantcodes.com/extentx/)
     MONGODB_SERVER=ADDRESS_OF_THE_SERVER
