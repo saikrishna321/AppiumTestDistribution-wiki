@@ -12,4 +12,7 @@
     e.g. `brew install libimobiledevice libplist libtasn1 usbmuxd openssl ideviceinstaller`
 3. Developer option must be enabled in attached iOS device (Settings>Developer>Enable UI Automation)
 4. You must have a debug build of the application you wish to test.
-5. If you want to trigger tests on Multiple Simulators in parallel make sure you have Xcode9-beta and latest appium version 1.6.6.beta
+5. If you want to trigger tests on Multiple Simulators in parallel make sure you have Xcode9-beta and latest appium version 1.6.6.beta.
+6. Install ios-webkit-debug-proxy, if running web test on real devices.
+   e.g. `brew install ios-webkit-debug-proxy
+ `
