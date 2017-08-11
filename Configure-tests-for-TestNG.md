@@ -55,14 +55,8 @@ public class RunnerCukes {
     ```
     RUNNER=distribute
 
-    ## For appium 1.5.X users (If appium installed using npm)
+    ## For appium 1.6.X users (If appium installed using npm)
     APPIUM_JS_PATH=/usr/local/lib/node_modules/appium/build/lib/main.js
-
-    ## For appium 1.4.13 users (GUI)
-    APPIUM_JS_PATH=/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js
-
-    ## For appium 1.4.16 users (Non-GUI -- Installed using npm)
-    APPIUM_JS_PATH=/usr/local/lib/node_modules/appium/bin/appium.js
     BROWSER_TYPE=chrome
     APP_TYPE=NA
     BUNDLE_ID=
@@ -74,6 +68,7 @@ public class RunnerCukes {
     ```
 3. If you want to specify android/iOS capabilities 
    (https://github.com/saikrishna321/PageObjectPatternAppium/tree/master/caps)
+
 
 ###Run Test from CommandLine
 
