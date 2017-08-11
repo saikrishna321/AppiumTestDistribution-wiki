@@ -67,6 +67,9 @@ public class RunnerCukes {
     ## Default path to capability json is root/caps/, if the location of the android.json & iOS.json is changed make sure you mention as below 
     IOS_CAPS=relative/absolute
     ANDROID_CAPS=relative/absolute 
+
+    ## To run test on parallel simulators
+    DEVICE_PLATFORM=simulator
     
     ## For remote logging the reports using ExtentX(http://extentreports.relevantcodes.com/extentx/)
     MONGODB_SERVER=ADDRESS_OF_THE_SERVER
