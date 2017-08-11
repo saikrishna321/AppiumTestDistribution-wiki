@@ -76,13 +76,13 @@ public class RunnerCukes {
    (https://github.com/saikrishna321/PageObjectPatternAppium/tree/master/caps)
 
 
-###Run Test from CommandLine
+### Run Test from CommandLine
 
 ```
 Platform="android/ios/both" mvn clean -Dtest=Runner test
 ```
 
-###Run Test from CommandLine with ExtentX logging
+### Run Test from CommandLine with ExtentX logging
 
 ```
 ExtentX="true" mvn clean -Dtest=Runner test
