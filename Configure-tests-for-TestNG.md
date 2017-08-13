@@ -57,6 +57,10 @@ public class RunnerCukes {
 
     ## For appium 1.6.X users (If appium installed using npm)
     APPIUM_JS_PATH=/usr/local/lib/node_modules/appium/build/lib/main.js
+    
+    ## For Windows users 
+    APPIUM_JS_PATH=C:/Users//AppData/Roaming/npm/node_modules/appium/build/lib/main.js
+
     BROWSER_TYPE=chrome
     APP_TYPE=NA
     BUNDLE_ID=
