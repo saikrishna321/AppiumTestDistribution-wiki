@@ -1,7 +1,7 @@
 * Specific test method can be skipped based on platform (AndroidDriver/IOSDriver) when running tests Concurrently on the same OSX Host.
     ```
     @Test
-    @SkipIf(platform = "AndroidDriver")
+    @SkipIf(platform = "Android")
     public void testOnlyForIOS() throws Exception  {
         Your test steps...
         ...
@@ -9,7 +9,7 @@
     }
 
     @Test
-    @SkipIf(platform = "IOSDriver")
+    @SkipIf(platform = "iOS")
     public void testOnlyForAndroid() throws Exception  {
         Your test steps...
         ...
