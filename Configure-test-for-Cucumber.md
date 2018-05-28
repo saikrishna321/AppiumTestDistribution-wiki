@@ -6,7 +6,7 @@ public class RunnerCukes {
     @Test
     public  void testCukesRunner() throws Exception {
         ParallelThread parallelThread = new ParallelThread();
-        parallelThread.runner("");
+        parallelThread.runner("output");
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
 }
 
@@ -104,7 +104,7 @@ public class SampleSteps extends ExtentCucumberFormatter {
                             <!-- Excluded tags (~@notMe) are ignored. -->
                             <filterFeaturesByTags>false</filterFeaturesByTags>
                             <!-- Generate TestNG runners instead of JUnit ones. -->
-                            <useTestNG>false</useTestNG>
+                            <useTestNG>true</useTestNG>
                         </configuration>
                     </execution>
                 </executions>
@@ -118,5 +118,5 @@ public class SampleSteps extends ExtentCucumberFormatter {
 ###Run Test from CommandLine
 
 ```
-mvn clean -Dtest=RunnerCukes test
+Platform=android mvn clean -Dtest=RunnerCukes test
 ```
