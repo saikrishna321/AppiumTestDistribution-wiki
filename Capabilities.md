@@ -1,4 +1,4 @@
-##Tips:
+##CAPABILITIES:
 
 * In order to test on a real iOS device cahange the simulator capability on the cabalities file to device, both can be used to run in both real devices and simulators.
     "app": {

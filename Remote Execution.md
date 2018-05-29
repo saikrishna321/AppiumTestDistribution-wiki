@@ -1,6 +1,6 @@
-##Tips:
+##REMOTE EXECUTION:
 
-* In order to execute distributed appium prohect on a remote host it is necessary to start a remote appium server on the host. Code for the server can be found here: https://github.com/hariharanwebmail/RemoteAppiumManager
+* In order to execute distributed appium project on a remote host it is necessary to start a remote appium server on the host. Code for the server can be found here: https://github.com/hariharanwebmail/RemoteAppiumManager
 * It may be necessary to add the following to the pom.xml:
 ```
         <dependency>
@@ -34,8 +34,8 @@
 	log4j.logger.com.foo=WARN
 ``` 
     
-* run @mvn clean compile
-* then run mvn package to create the jars
-* run "java -jar target/RemoteAppiumManager-1.2.jar -Dport=4567" to start the server at port 4567 as this is the default port used by the appium
+* run `mvn clean compile`
+* run `mvn package to create the jars
+* run `java -jar target/RemoteAppiumManager-1.2.jar -Dport=4567 to start the server at port 4567 as this is the default port used by the appium
 * you can enter http://your_ip:4567/ to see whether the server is running.
 * insert the host machine's IP in the hostMachines section in capabilities.json
